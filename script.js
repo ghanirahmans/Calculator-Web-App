@@ -4,6 +4,37 @@ let previousOperation;
 
 let screen = document.querySelector(".screen");
 
+document.addEventListener("keydown", (event) => {
+	let key = event.key;
+
+	if (!isNaN(key)) {
+		buttonClick(key);
+	} else if (key == "Backspace") {
+		buttonClick("←");
+	} else if (key == "Enter") {
+		buttonClick("=");
+	} else if (key == "c") {
+		buttonClick("C");
+	} else if (key == "+" || key == "-" || key == "*" || key == "/") {
+		let symbol;
+		switch (key) {
+			case "+":
+				symbol = "+";
+				break;
+			case "-":
+				symbol = "−";
+				break;
+			case "*":
+				symbol = "×";
+				break;
+			case "/":
+				symbol = "÷";
+				break;
+		}
+		buttonClick(symbol);
+	}
+});
+
 function buttonClick(value) {
 	if (isNaN(value)) {
 		handleSymbol(value);
