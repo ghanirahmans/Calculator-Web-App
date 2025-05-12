@@ -15,7 +15,13 @@ document.addEventListener("keydown", (event) => {
 		buttonClick("=");
 	} else if (key == "c") {
 		buttonClick("C");
-	} else if (key == "+" || key == "-" || key == "*" || key == "/") {
+	} else if (
+		key == "+" ||
+		key == "-" ||
+		key == "*" ||
+		key == "/" ||
+		key == "%"
+	) {
 		let symbol;
 		switch (key) {
 			case "+":
@@ -29,6 +35,9 @@ document.addEventListener("keydown", (event) => {
 				break;
 			case "/":
 				symbol = "÷";
+				break;
+			case "%":
+				symbol = "%";
 				break;
 		}
 		buttonClick(symbol);
@@ -65,6 +74,10 @@ function handleSymbol(symbol) {
 			} else {
 				buffer = buffer.substring(0, buffer.length - 1);
 			}
+			break;
+		case "%":
+			buffer = (buffer / 100).toString();
+			runningTotal = buffer;
 			break;
 		case "+":
 		case "−":
