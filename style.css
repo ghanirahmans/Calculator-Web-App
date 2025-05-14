@@ -24,14 +24,14 @@ body {
 	backdrop-filter: blur(5.5px);
 	-webkit-backdrop-filter: blur(5.5px);
 	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 35px rgba(255, 255, 255, 0.1);
 	color: #232323;
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	background: rgba(255, 255, 255, 0.3);
 	border: 1px solid rgba(255, 255, 255, 0.34);
 	flex-basis: 400px;
-	height: 540px;
+	height: 620px;
 	padding: 20px 35px;
 }
 
@@ -54,9 +54,24 @@ body {
 	display: flex;
 	justify-content: space-between;
 	margin: 5% 0;
+	margin-top: 20px;
 }
 
 .calc-button {
+	backdrop-filter: blur(5.5px);
+	-webkit-backdrop-filter: blur(5.5px);
+	background: rgba(255, 255, 255, 0.75);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+	color: #232323;
+	flex-basis: 20%;
+	font-family: inherit;
+	font-size: 24px;
+	height: 65px;
+}
+
+.calc-button-advance {
 	backdrop-filter: blur(5.5px);
 	-webkit-backdrop-filter: blur(5.5px);
 	background: rgba(255, 255, 255, 0.75);

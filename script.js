@@ -83,6 +83,7 @@ function handleSymbol(symbol) {
 		case "−":
 		case "×":
 		case "÷":
+		case "Mod":
 			handleMath(symbol);
 			break;
 	}
@@ -111,9 +112,13 @@ function flushOperation(intBuffer) {
 		runningTotal *= intBuffer;
 	} else if (previousOperation === "÷") {
 		runningTotal /= intBuffer;
+	} else if (previousOperation === "Mod") {
+		runningTotal %= intBuffer;
+	} 
+	// else if (previousOperation === "Log") {
+	// 	runningTotal **= intBuffer;
 	}
 }
-
 function handleNumber(numberString) {
 	if (buffer === "0") {
 		buffer = numberString;
